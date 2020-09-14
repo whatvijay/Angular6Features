@@ -1,0 +1,28 @@
+<p>
+  formsexample works!
+</p>
+<br/>
+<h2>template example</h2>
+<br/>
+<form #form1="ngForm" (ngSubmit)="formhandle1(form1.value)">
+  name:<input type="text" name="name" placeholder="name" ngModel/>
+  <br/>
+  pass:<input type="password" name="password" placeholder="password" ngModel/>
+  <br/>
+  <input type="submit" value="submit"/>
+  </form>
+<br/>
+  <h2>Model example</h2>
+<br/>
+  <form [formGroup]="formData" (ngSubmit)="formHandle2(formData.value)">
+    email :<input type="text" name="email" placeholder="email" formControlName="email"/>
+    password:<input type="password" name="password" placeholder="pwd" formControlName="pwd"/>
+    <input type="submit" value="submit"/>
+    </form>
+<br/>Model example2 - observation is place holder has no use formcontrolName should be matched
+<br/> 
+    <form [formGroup]="formData2" (ngSubmit)="formHandle3(formData2.value)">
+      email: <input type="text" name="email" placeholder="emailNew"  formControlName="emailNew"/>
+      password: <input type="text" name="password" placeholder="pwd" formControlName="pwd">
+      <input type="submit" value="submit">
+    </form>

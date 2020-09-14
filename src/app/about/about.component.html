@@ -1,0 +1,30 @@
+<p>
+  about works!
+  vijayasri is Mobile App Dev
+</p>
+
+message from about page :{{msg}}
+message from about :{{msg2}}
+<!--Input : <input type="text" (name)> -->
+values : 
+<div *ngFor="let v of arrayOFValues">
+{{v}}
+</div>
+
+<div *ngIf="showOrHide">
+show or hide value is true and this is shown
+</div>
+
+<input type ="text" name="input1" (click)="clickMe($event)"/>
+
+{{inputedValue}}
+
+<!--<div>
+    <form #firstForm="ngForm" (ngsubmit)="submitFirstForm(firstForm)">
+      <h2>form 1</h2>
+      <input type="text" id="userName" name="userName" placeholder="userName" required ngModel/>
+      <input type="text" id="password" name="password" placeholder="password" required ngModel />
+      <button type="submit" id="submitForm1">submitForm1</button>
+      </form>
+  </div> -->
+ 

@@ -1,0 +1,66 @@
+<p>
+  pipeexamp works!
+</p>
+converts message into uppercase
+{{ sampleMessage|uppercase}}
+<br/>
+converts message into lowercase
+{{sampleMessage |lowercase}}
+<br/>
+converts date into different format
+{{sampleDate|date}}
+<br/>
+grabbed month it gave 8 for september
+{{sampleMonth}}
+<br/>
+date:'d/M/y' :{{sampleDate|date:'d/M/y'}}
+<br/>
+date:'d/MM/y' :{{sampleDate|date:'d/MM/y'}}
+<br/>
+date:'dd/mm/yy' :{{sampleDate|date:'d/mm/yy'}}
+<br/>it gives short time h:mm a/p date :'shortTime' :{{sampleDate|date:'shortTime'}}
+<br/>
+<br/>it gives long time with sec and also Timezone date :'longTime' :{{sampleDate|date:'longTime'}}
+<br/>
+month for january
+{{janMonth}}
+<br/>
+sample time 
+{{sampleTime}}
+<br/>
+<p>
+number 10.2 is converted to 
+below because 3 represents decimal before digits 
+4 represnts minimum digits after decimal and 
+6 represnts maximum digits after decimal
+</p>
+decimal value :
+{{decimalValue| number:'3.4-6'}}
+<br/>
+<p>
+another example  given 3 digits before decimal and pipe is allowing 2 it
+ will display 3 digits
+ after decimal if maximum nuber is not given it takes maximum as minimumnumber only
+</p>
+{{123.456789| number : '2.3-6'}}
+<br>
+Json value
+{{jsonVal}} <br/>
+Json Value with pipe{{jsonVal|json}}
+<br/>
+percent multiples by 100 and elliminates decimal
+<br/>
+percent for 0.2578888:{{perCentVal|percent}}
+<br/>
+percent for 25:{{perCentVal2|percent}}
+
+<br/>slice for 2:6 index starts with 0 and and sliced till index of 5  AbbaJabba :{{'AbbaJabba'|slice:2:6}}
+
+<br/>subjects it is array and picking 3 subject and 4 subject: {{subjects|slice:2:4}}
+
+<br/> currency pipe currency:"USD":true: {{234|currency:"USD":true}}
+<br/> currency pipe currency:"USD":false :{{234|currency:"USD":false}}
+<br/> currency pipe currency:"USD" :{{234|currency:"USD"}}
+<br/> inr curren :{{234|currency:"INR"}}
+<br/> custom pipe : {{'disco dancer'|CustomPipe}}
+<br/> custom pipe2 accepting 2 values :{{'abcd'|CustomPipe2:'secondValue'}}

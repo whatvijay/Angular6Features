@@ -1,0 +1,66 @@
+<p>
+  basics-demo works!
+</p>
+<br/>
+Interpolation {{interPolationExample}}
+<br/>
+<div *ngFor= "let subject of subjects">{{subject}}</div>
+
+<select>
+  <option *ngFor="let subject of subjects" value={{subject}}>{{subject}}</option>
+  </select>
+
+  <select>
+    <option *ngFor="let city of cities">{{city}}</option>
+    </select>
+    <br/>
+<span *ngIf="isAvailable">isAvailable is true</span>
+<br/>
+Property binding examples:
+<br/>
+setting innerHtml Property
+<span [innerHtml]="textHtml"></span>
+<br/>
+seeting innerHTML property using bind tag
+<span bind-innerHtml="textHtml2"> </span>
+
+<br/>Observation is innerhtml is appended<br/>
+Style binding
+<h3 [style.color]="colorFromComp" [style.background-color]="bgco"> H3 style color is modified by style binding style.color style.background-color</h3>
+<br/>
+attribute binding is requires when
+Angular 2 attribute binding is required in those cases when HTML attribute has no corresponding DOM property. Find some differences between HTML attribute and DOM property. 
+<br/>
+<table [border]="borderW"  [attr.colspan]="colspanattr">
+  <tr>
+    <td>row1 col1</td>
+  </tr>
+  </table>
+
+<br/>
+Event Binding :
+<br/>
+ enter some input and Onclick 
+<input type="text" (click)="clickedme($event)"/>
+{{onClickInput}}
+
+
+<div *ngIf="tempValid; then thenTemp else elseTemp">
+  template
+</div>
+
+<ng-template #thenTemp>
+  valid temp
+  </ng-template>
+
+  <ng-template #elseTemp>
+    else temp
+  </ng-template>
+
+  <br/>
+  Custom directives example . It will automatically give bacg ground color as green and font as required
+  <p appHoverdirective colorToBeInput="BLACK" >
+     custom directive is applied
+    </p>
+
+    <app-parent1>parent component</app-parent1>

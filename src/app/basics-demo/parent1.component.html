@@ -1,0 +1,11 @@
+<p>
+  parent1 works! [messageToChild]="hai child"
+</p>
+
+<p>
+    to pass a param from parent to child we should put input of  child in [] of child directive
+    = has variable from parent 
+    </p>
+   <app-child1 (msgtoParent)="readMsg($event)"></app-child1> 
+   message from child {{msg}}
+<app-child1 [messageToChild]="messageFromParent"></app-child1> 
